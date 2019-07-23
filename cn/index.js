@@ -65,7 +65,7 @@ function LoadAuthorInfo(name,id){
    			});
 }
 //加载信息
-$.getJSON("downloadsinfo.json",function(data) {
+$.getJSON("../cn/downloadsinfo.json",function(data) {
 	   mods = data;
 	   LoadMods(0);
    });
