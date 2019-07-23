@@ -30,12 +30,12 @@ function LoadMods(pageindex){
 			content += "<p class=\"warning\">" + mod.warning + "</p>";
 		}
 		if(mod.addr.win != undefined){
-			for(int j = 0;j<mod.addr.win.length;j++){
+			for(var j = 0;j<mod.addr.win.length;j++){
 				content += "<a class=\"download\" href=\"" + mod.addr.win[j] + "\">win下载链接" + (j+1) + "</a>";
 			}
 		}
 		if(mod.addr.android != undefined){
-			for(int j = 0;j<mod.addr.android.length;j++){
+			for(var j = 0;j<mod.addr.android.length;j++){
 				content += "<a class=\"download\" href=\"" + mod.addr.android[j] + "\">win下载链接" + (j+1) + "</a>";
 			}
 		}
