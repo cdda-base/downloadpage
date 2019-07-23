@@ -2,26 +2,25 @@
 	"name":"示例项目",
 	"tags":[],
 	"author":"测试者，可空",
-	"ver":9320,
+	"ver":"版本，只填数字",
 	"info":"可空",
 	"warning":"可空",
 	"addr":{
 		"win":["可空"],
 		"android":["可空"]
 	}
-	"score":10.0
+	"score":"10.0"
 },
 {
 	"name":"CDDA 0.D 9320",
 	"tags":[],
 	"author":"Kervi",
-	"ver":9320,
+	"ver":"9320",
 	"info":"已知bug：不能在民宅烤箱中烧报纸，问题不大不影响游戏",
-	"warning":"可空",
 	"addr":{
 		"win":[],
 		"android":[]
 	}
-	"score":9.0
+	"score":"9.0"
 }
 ]
