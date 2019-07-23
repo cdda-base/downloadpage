@@ -34,12 +34,17 @@ function LoadMods(pageindex){
 				content += "<a class=\"download\" href=\"" + mod.addr.win[j] + "\">win下载链接" + (j+1) + "</a>";
 			}
 		}
-		if(mod.addr.android != undefined){
-			for(var j = 0;j<mod.addr.android.length;j++){
-				content += "<a class=\"download\" href=\"" + mod.addr.android[j] + "\">win下载链接" + (j+1) + "</a>";
+		if(mod.addr.osx != undefined){
+			for(var j = 0;j<mod.addr.osx.length;j++){
+				content += "<a class=\"download\" href=\"" + mod.addr.osx[j] + "\">OSX下载链接" + (j+1) + "</a>";
 			}
 		}
-		content += "<p class=\"score\">" + mod.score + "</p>";
+		if(mod.addr.android != undefined){
+			for(var j = 0;j<mod.addr.android.length;j++){
+				content += "<a class=\"download\" href=\"" + mod.addr.android[j] + "\">安卓下载链接" + (j+1) + "</a>";
+			}
+		}
+		content += "<p class=\"Score\">稳定评分：" + mod.score + "</p>";
 		content += "</div>";
 		
 		$(".Mods").append(content);
