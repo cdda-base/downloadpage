@@ -1,4 +1,16 @@
-[
+[{
+	"name":"CDDA 0.D 9527",
+	"tags":[],
+	"author":"网上相传",
+	"ver":9527,
+	"info":"网上相传而得，暂无已知确定性bug",
+	"addr":{
+		"win":["https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-jenkins-b9527/cataclysmdda-0.D-Windows_x64-Tiles-9527.zip"],
+		"osx":["https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-jenkins-b9527/Cataclysm-0.D-OSX-Tiles-9527.dmg"],
+		"android":["https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-jenkins-b9527/cataclysmdda-0.D-9527.apk"]
+	},
+	"score":8.0
+},
 {
 	"name":"CDDA 0.D 9320",
 	"tags":[],
