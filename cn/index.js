@@ -51,7 +51,8 @@ function LoadMods(pageindex){
 		
 	}
 	//添加换页
-		$("#changepage").append("<p>现在是第"+ (pageindex + 1) + "页，共"+ Math.ceil(mods.length / pagemax) +"页</p>")
+		$("#changepage").append("<p>现在是第"+ (pageindex + 1) + "页，共"+ Math.ceil(mods.length / pagemax) +"页</p>");
+		if(pagemax >= mods.length) return;//如果只有一页就不用换了
 		if(pageindex == 0){
 			$("#changepage").append("<a href=\"#header\" onClick=\"LoadMods(" + (pageindex + 1) + ")\">下一页</a>");
 		}else if(modindex + pagemax >= mods.length){//当到了最后一页
