@@ -5,9 +5,9 @@
 	"ver":9527,
 	"info":"网上相传而得，暂无已知确定性bug",
 	"addr":{
-		"win":["https://download.cddabase.site/Official/cdda-jenkins-b9527/cataclysmdda-0.D-Windows_x64-Tiles-9527.zip"],
-		"osx":["https://download.cddabase.site/Official/cdda-jenkins-b9527/Cataclysm-0.D-OSX-Tiles-9527.dmg"],
-		"android":["https://download.cddabase.site/Official/cdda-jenkins-b9527/cataclysmdda-0.D-9527.apk"]
+		"win":["https://download.cddabase.site/Official/download/cdda-jenkins-b9527/cataclysmdda-0.D-Windows_x64-Tiles-9527.zip"],
+		"osx":["https://download.cddabase.site/Official/download/cdda-jenkins-b9527/Cataclysm-0.D-OSX-Tiles-9527.dmg"],
+		"android":["https://download.cddabase.site/Official/download/cdda-jenkins-b9527/cataclysmdda-0.D-9527.apk"]
 	},
 	"score":8.0
 },
@@ -18,9 +18,9 @@
 	"ver":9320,
 	"info":"已知bug：不能在民宅烤箱中烧报纸，问题不大不影响游戏",
 	"addr":{
-		"win":["https://download.cddabase.site/Official/cdda-jenkins-b9320/cataclysmdda-0.D-Windows_x64-Tiles-9320.zip"],
-		"osx":["https://download.cddabase.site/Official/cdda-jenkins-b9320/Cataclysm-0.D-OSX-Tiles-9320.dmg"],
-		"android":["https://download.cddabase.site/Official/cdda-jenkins-b9320/cataclysmdda-0.D-9320.apk"]
+		"win":["https://download.cddabase.site/Official/download/cdda-jenkins-b9320/cataclysmdda-0.D-Windows_x64-Tiles-9320.zip"],
+		"osx":["https://download.cddabase.site/Official/download/cdda-jenkins-b9320/Cataclysm-0.D-OSX-Tiles-9320.dmg"],
+		"android":["https://download.cddabase.site/Official/download/cdda-jenkins-b9320/cataclysmdda-0.D-9320.apk"]
 	},
 	"score":9.0
 }]
