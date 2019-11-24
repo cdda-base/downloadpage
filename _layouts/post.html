@@ -12,7 +12,8 @@ layout: default
     {% endif %}
     <span class="post-meta">版本</span>：{{ page.ver }} </span><br/>
     <hr/>
-    <span class="post-text">{{ content }}<br/>
+    <span class="post-text">{{ content }}
+        <h4>
         {% if page.winaddr %}
         <a href="{{ page.winaddr }}">windows下载 </a><br/>
         {% endif %}
@@ -23,6 +24,7 @@ layout: default
         <a href="{{ page.androidaddr }}">Android下载 </a><br/>
         {% endif %}
         <p>稳定评分：{{ page.score }}</p>
+        </h4>
     </span>
     
     {% include post-pagination.html %}
