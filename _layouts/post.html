@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="box">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.tester %}
+    <span class="post-meta">测试者：{{ page.tester }} </span><br/>
+    {% endif %}
+    {% if page.author %}
+    <span class="post-meta">整编者</span>：{{ page.author }} </span><br/>
+    {% endif %}
+    <span class="post-meta">版本</span>：{{ page.ver }} </span><br/>
+    <hr/>
+    <span class="post-text">{{ content }}<br/>
+        {% if page.winaddr %}
+        <a href="{{ page.winaddr }}">windows下载 </a><br/>
+        {% endif %}
+        {% if page.osxaddr %}
+        <a href="{{ page.osxaddr }}">OSX下载 </a><br/>
+        {% endif %}
+        {% if page.androidaddr %}
+        <a href="{{ page.androidaddr }}">Android下载 </a><br/>
+        {% endif %}
+        <p>稳定评分：{{ page.score }}</p>
+    </span>
+    
+    {% include post-pagination.html %}
+    <br><b><p>评论须知：</p></b><p>本站禁止一切无意义刷屏言论和攻击言论等不当言论，如违规将予以删除并视情况决定是否拉入黑名单，使用一次性邮箱账号发表的无营养评论会一律删除，请大家使用自己的社交账号登陆，谢谢!</p>
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NzQ2Mi8yMzk2Mg==">
+        <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+    
+           if (typeof LivereTower === 'function') { return; }
+    
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+    
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+        </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+
+<!--<div class="box">-->
+    <!-- google ads code box -->
+<!--</div>-->
+

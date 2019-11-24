@@ -1,0 +1,15 @@
+---
+layout: page
+title: CDDA教程区
+---
+<ul class="posts">
+    {% for post in paginator.posts %}
+    <li class="post">
+        <small>{{ post.date | date_to_string }}</small>
+        <br>
+        <a class="nice-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p class="nice-text">{{ post.description }} <a href="{{ post.url | relative_url }}">阅读更多</a></p>
+    </li>
+    {% endfor %}
+    {% include pagination.html %}
+</ul>
