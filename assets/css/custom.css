@@ -5,22 +5,123 @@
     font-family: 'League Gothic';
     src: url('leaguegothic-regular-webfont.eot');
     src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('leaguegothic-regular-webfont.woff') format('woff'),
-    url('leaguegothic-regular-webfont.ttf') format('truetype'),
-    url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+        url('leaguegothic-regular-webfont.woff') format('woff'),
+        url('leaguegothic-regular-webfont.ttf') format('truetype'),
+        url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+:root{
+    --h:url({{ "/assets/images/title.webp" | relative_url }});
+    --bg:url({{ "/assets/images/bg.webp" | relative_url }});
+    --lg:linear-gradient(to bottom,rgba(4, 32, 44, .5), rgba(4, 32, 44, .3));
+}
+a.nav-item {
+    color: #00d1b2;
+}
 
+.hero.is-dark {
+    opacity: 1;
+    background: var(--bg);
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* height: 4rem; */
+}
+.hero.is-dark::before{
+    background: var(--h);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    filter: blur(0px);
+    background-size: cover;
+    background-position: center;
+}
+.hero.is-dark .title{
+    display:none;
+}
+.footer {
+    position:relative;
+    /* opacity: .999; */
+    background:     var(--lg);
+    box-shadow: 0 0 1px 1px rgba(136, 136, 136, .5);
+}
+
+.nav {
+    background: linear-gradient(to bottom,rgba(4, 32, 44, .5), rgba(4, 32, 44, .3));;
+    /*opacity: .999*/
+}
+
+.nav.has-shadow {
+    box-shadow: 0 0 1px 1px rgba(136, 136, 136, .5);
+}
+
+.card-header-title {
+    color: whitesmoke;
+}
+
+.tile.is-parent {
+    background: rgba(4, 32, 44, 0);
+    opacity: .999;
+    /* box-shadow: 0px 0px 3px 0px rgba(4, 32, 44, .5); */
+}
+.tile.is-parent.is-vertical.sidebar{
+    background: unset;
+}
+
+
+.box,
+.card {
+    background: var(--lg);
+    box-shadow: 0 0 1px 1px rgba(136, 136, 136, .5);
+}
+.card-header{
+    box-shadow: unset;
+    /*border-bottom:1px solid #dbdbdb ;*/
+}
 .main-container {
+    position:relative;
     max-width: 80%;
     margin: 0 auto;
     padding-left: 2%;
     padding-right: 2%;
+    word-break: break-word;
 }
 
+.main-container::before{
+    max-width: 880px;
+}
+.tile.is-ancestor.is-vertical {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    background-image: var(--bg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
 .container {
     text-align: center;
+}
+
+body,
+.content {
+    color: #eee;
 }
 
 /* for mobile screens otherwise it messes up the nav*/
@@ -28,7 +129,7 @@
     width: 65%;
 }
 
-h1.title > span {
+h1.title>span {
     font-family: "League Gothic", "Arial Narrow", Arial, sans-serif;
     margin-bottom: 1.75rem;
     font-size: 1.5em;
@@ -42,11 +143,14 @@ h1.title > span {
 .post {
     margin-bottom: 1em;
 }
-
+.posts>.post{
+    list-style:url({{ "/assets/images/circle.webp" | relative_url }});
+}
 .nice-title {
     font-size: larger;
     font-weight: 400;
     font-family: Roboto, sans-serif;
+    /* color: #eeeeee; */
 }
 
 .nice-text {
@@ -79,59 +183,123 @@ h1.title > span {
     font-family: "Open Sans", sans-serif;
 }
 
-.post-text > p {
+.post-text>p {
     margin-bottom: 1em;
 }
 
 /* sorry God. Just once */
 .sidebar {
-    padding: 0 0.75rem 0.75rem 0.75rem !important;
+    padding: 0 0 0.75rem 0.75rem !important;
+    box-shadow: unset !important;
 }
 
 .box {
     padding: 0.75rem;
     margin-bottom: 0.75rem;
+    box-shadow: 0 0 1px 2px rgba(136, 136, 136, .5);
+}
+a,a.nav-item{
+    color:#7abc5a;
+}
+a:hover,a.nav-item:hover{
+    color:#5a945a;
 }
 
-html, body {
+html,
+body {
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
-a {
-    color: #57A3E8;
-}
 /* Hotfix for lists being misaligned */
-.tile.is-parent ol, ul {
-  padding: 2% 5%;
+.tile.is-parent ol,
+ul {
+    padding: 2% 5%;
+}
+.blood{
+    position: absolute;
+    width:100px;
+    height:100px;
+    animation:bloodA 8s;
+    opacity: 1;
+}
+@keyframes bloodA
+{
+0% {opacity: 0;}
+50% {opacity: .8;}
+100% {opacity: 0;}
+}
+
+table,thead,tbody,tr,th,td{
+	border:1px solid whitesmoke;
+}
+strong,table th{
+    color:whitesmoke;
+    
+}
+table {
+    /* table-layout: fixed !important;  */
+    width: 100% !important;
+    border-collapse:collapse;
+    border:none;
+    /* font-size:0.25rem; */
+}
+
+table tr td,
+table tr th {
+    width:1px;
+    white-space:nowrap;
+    word-break:keep-all; /* 避免长单词截断，保持全部 */
+	/* border:solid #676767 1px; */
+	text-align:center;
+	white-space:pre-line;
+    word-break:break-all !important;
+	word-wrap:break-word !important;
+	display:table-cell;
+	vertical-align:middle !important;
+	white-space: normal !important;
+	height:auto;
+	vertical-align:text-top;
+	padding:2px 2px 0 2px;
 }
 /* Hotfix for Bulma striping headings of styling */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
 }
+
 @media screen and (max-width: 768px) {
-  .pagination {
-    flex-wrap: nowrap;
-  }
-  .pagination-list {
-    font-size: 0%;
-  }
-  .main-container{max-width:900px}
+    .pagination {
+        flex-wrap: nowrap;
+    }
+
+    .pagination-list {
+        font-size: 0%;
+    }
+    .sidebar {
+    padding: 0 0.75rem 0.75rem 0.75rem !important;
+    }
+    .main-container{max-width:900px}
 }
 @media screen and (min-width: 769px) {
-  .tile.is-a {
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-    width: 66.66667%;
-    min-width:calc(100% - 350px);
+    .tile.is-a {
+      -webkit-box-flex: 0;
+      -ms-flex: none;
+      flex: none;
+      width: 66.66667%;
+      min-width:calc(100% - 350px);
+    }
+    .tile.is-b {
+      -webkit-box-flex: 0;
+      -ms-flex: none;
+      flex: none;
+      width: 33.33333%;
+      max-width:350px;
+    }
   }
-  .tile.is-b {
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-    width: 33.33333%;
-    max-width:350px;
-  }
-}
+
 /* ~ jpasholk */
