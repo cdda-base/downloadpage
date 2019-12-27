@@ -12,8 +12,8 @@
     font-style: normal;
 }
 :root{
-    --h:url({{ "/assets/images/title.webp" | relative_url }});
-    --bg:url({{ "/assets/images/bg.webp" | relative_url }});
+    --h:url({{ "/assets/images/title.webp" | site.baseurl }});
+    --bg:url({{ "/assets/images/bg.webp" | site.baseurl }});
     --lg:linear-gradient(to bottom,rgba(4, 32, 44, .5), rgba(4, 32, 44, .3));
 }
 a.nav-item {
@@ -144,7 +144,7 @@ h1.title>span {
     margin-bottom: 1em;
 }
 .posts>.post{
-    list-style:url({{ "/assets/images/circle.webp" | relative_url }});
+    list-style:url({{ "/assets/images/circle.webp" | site.baseurl }});
 }
 .nice-title {
     font-size: larger;
