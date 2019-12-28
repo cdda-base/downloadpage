@@ -12,8 +12,8 @@
     font-style: normal;
 }
 :root{
-    --h:url("https://cddabase.site/Themes/assets/images/title.webp");
-    --bg:url("https://cddabase.site/Themes/assets/images/bg.webp");
+    --h:url({{ "/assets/images/title.webp" | relative_url }});
+    --bg:url({{ "/assets/images/bg.webp" | relative_url }});
     --lg:linear-gradient(to bottom,rgba(4, 32, 44, .5), rgba(4, 32, 44, .3));
 }
 a.nav-item {
@@ -144,7 +144,7 @@ h1.title>span {
     margin-bottom: 1em;
 }
 .posts>.post{
-    list-style:url("https://cddabase.site/Themes/assets/images/circle.webp");
+    list-style:url({{ "/assets/images/circle.webp" | relative_url }});
 }
 .nice-title {
     font-size: larger;
@@ -208,7 +208,7 @@ a:hover,a.nav-item:hover{
 html,
 body {
     max-width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* Hotfix for lists being misaligned */
